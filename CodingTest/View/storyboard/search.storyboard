@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Nza-SN-cBY">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search View Controller-->
+        <scene sceneID="hdO-7b-Jt0">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" id="Nza-SN-cBY" customClass="SearchViewController" customModule="CodingTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zli-Pt-EAS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Search for any person" showsSearchResultsButton="YES" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cHd-nr-xbk">
+                                <rect key="frame" x="0.0" y="28" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QJi-WB-dtV">
+                                <rect key="frame" x="0.0" y="84" width="375" height="583"/>
+                                <color key="backgroundColor" red="0.86150329820000004" green="0.86150329820000004" blue="0.86150329820000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="sectionIndexBackgroundColor" red="0.86150329820000004" green="0.86150329820000004" blue="0.86150329820000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QJi-WB-dtV" firstAttribute="top" secondItem="cHd-nr-xbk" secondAttribute="bottom" id="5oe-ZX-8xf"/>
+                            <constraint firstItem="cHd-nr-xbk" firstAttribute="leading" secondItem="t7H-lF-uAG" secondAttribute="leading" id="E3e-vQ-DHi"/>
+                            <constraint firstItem="cHd-nr-xbk" firstAttribute="top" secondItem="t7H-lF-uAG" secondAttribute="top" constant="8" id="FFz-P3-xi2"/>
+                            <constraint firstItem="cHd-nr-xbk" firstAttribute="trailing" secondItem="t7H-lF-uAG" secondAttribute="trailing" id="GcY-Dd-aQK"/>
+                            <constraint firstItem="QJi-WB-dtV" firstAttribute="leading" secondItem="t7H-lF-uAG" secondAttribute="leading" id="ejk-Fn-6fH"/>
+                            <constraint firstItem="QJi-WB-dtV" firstAttribute="trailing" secondItem="t7H-lF-uAG" secondAttribute="trailing" id="nGw-LD-TCg"/>
+                            <constraint firstItem="QJi-WB-dtV" firstAttribute="bottom" secondItem="t7H-lF-uAG" secondAttribute="bottom" id="nb5-Zd-jZc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="t7H-lF-uAG"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="cHd-nr-xbk" id="XBS-Mb-pyY"/>
+                        <outlet property="searchResultsTableView" destination="QJi-WB-dtV" id="kDe-vc-Au7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BHq-JQ-xek" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.399999999999999" y="83.208395802098963"/>
+        </scene>
+    </scenes>
+</document>
